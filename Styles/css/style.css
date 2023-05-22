@@ -156,12 +156,26 @@
 #player .player-menu.setting-song > .dropup > .dropdown-menu,
 #player .setting-song.setting-song > .dropup > .dropdown-menu {
   background-color: #212121;
+  color: #FFFFFF;
+  margin: 8px -10px !important;
+  border-radius: 0;
+}
+#player .player-menu.setting-song > .dropup > .dropdown-menu .nav-item,
+#player .setting-song.setting-song > .dropup > .dropdown-menu .nav-item {
+  padding: 7px 15px;
+}
+#player .player-menu.setting-song > .dropup > .dropdown-menu .nav-item:hover,
+#player .setting-song.setting-song > .dropup > .dropdown-menu .nav-item:hover {
+  background: #454545;
+}
+#player .player-menu.setting-song > .dropup > .dropdown-menu .nav-item .nav-link .fa,
+#player .setting-song.setting-song > .dropup > .dropdown-menu .nav-item .nav-link .fa {
+  margin-right: 7px;
 }
 #player .player-menu.setting-song > .dropup > .dropdown-menu > .volume-setting,
 #player .setting-song.setting-song > .dropup > .dropdown-menu > .volume-setting {
   display: flex;
   padding: 12px 23px;
-  color: #FFFFFF;
 }
 #player .player-menu.setting-song > .dropup > .dropdown-menu > .volume-setting > .range-volume,
 #player .setting-song.setting-song > .dropup > .dropdown-menu > .volume-setting > .range-volume {
@@ -187,7 +201,7 @@
 }
 #player .player-menu button,
 #player .setting-song button {
-  margin-left: 2px;
+  margin-left: 2px !important;
   padding: 13px;
   width: 56px;
   background: transparent;

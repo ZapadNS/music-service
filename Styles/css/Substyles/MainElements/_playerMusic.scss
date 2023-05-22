@@ -40,11 +40,27 @@
 
             >.dropup>.dropdown-menu {
                 background-color: #212121;
+                color: #FFFFFF;
+                margin: 8px -10px !important;
+                border-radius: 0;
+
+                .nav-item {
+                    padding: 7px 15px;
+
+                    &:hover {
+                        background: #454545;
+                    }
+
+                    .nav-link {
+                        .fa {
+                            margin-right: 7px;
+                        }
+                    }
+                }
 
                 >.volume-setting {
                     display: flex;
                     padding: 12px 23px;
-                    color: #FFFFFF;
 
                     >.range-volume {
                         position: relative;
@@ -71,7 +87,7 @@
         }
 
         button {
-            margin-left: 2px;
+            margin-left: 2px !important;
             padding: 13px;
             width: 56px;
             background: transparent;
