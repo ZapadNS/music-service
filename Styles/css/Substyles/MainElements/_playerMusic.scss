@@ -1,0 +1,130 @@
+#player {
+    padding: 5px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 64px;
+    display: flex;
+    background-color: #222222;
+
+    @media (max-width: 700px) {
+        .mobile {
+            display: none !important;
+        }
+    }
+
+    &.hide {
+        display: none;
+    }
+
+    .progress {
+        position: absolute;
+        top: -4px;
+        width: 100%;
+        height: 4px;
+        background: #2A2A2A;
+
+        >.progress-bar {
+            background-color: #FFCC00;
+        }
+    }
+
+    .player-menu,
+    .setting-song {
+        display: flex;
+        margin-right: 17px;
+
+        &.setting-song {
+            position: absolute;
+            right: 0;
+
+            >.dropup>.dropdown-menu {
+                background-color: #212121;
+
+                >.volume-setting {
+                    display: flex;
+                    padding: 12px 23px;
+                    color: #FFFFFF;
+
+                    >.range-volume {
+                        position: relative;
+                        left: 9px;
+                        top: 5px;
+                        height: 8px;
+                        width: 100px;
+                        background: #797979;
+                        border-radius: 50px;
+                        overflow: hidden;
+                        -webkit-appearance: none;
+
+                        &::-webkit-slider-thumb {
+                            height: 15px;
+                            width: 15px;
+                            background: #FFCC00;
+                            appearance: none;
+                            border: 0;
+                            box-shadow: -200px 0 0 185px #866c00;
+                        }
+                    }
+                }
+            }
+        }
+
+        button {
+            margin-left: 2px;
+            padding: 13px;
+            width: 56px;
+            background: transparent;
+            border: 1px solid transparent;
+            color: #FFFFFF;
+
+            &:first-child {
+                margin-left: 17px;
+            }
+
+            &:hover {
+                background: #313131;
+                border: 1px solid #4D4D4D;
+            }
+
+            &.dropdown-toggle::after {
+                content: none;
+            }
+        }
+
+        .loop-track,
+        .repeat-track {
+            &.active {
+                background: #313131;
+            }
+        }
+    }
+
+    .active-song {
+        display: flex;
+        padding: 5px 0;
+        color: #FFFFFF;
+
+        .albom-photo {
+            img {
+                height: 45px;
+                border-radius: 5px;
+            }
+        }
+
+        .song-description {
+            position: relative;
+            top: -3px;
+            margin-left: 11px;
+            cursor: default;
+
+            .track-name {
+                font-weight: 700;
+            }
+
+            .track-executor {
+                font-size: 15px;
+            }
+        }
+    }
+}

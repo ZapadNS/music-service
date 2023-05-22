@@ -1,0 +1,248 @@
+main {
+    .tab-content {
+        .chart {
+            padding: 0 10px;
+
+            .info {
+                margin-bottom: 35px;
+
+                h4 {
+                    color: #FFFFFF;
+                }
+
+                p {
+                    color: #8C8C8C;
+                    font-size: 16px;
+                    margin-bottom: 0;
+                }
+            }
+
+            .chart-list {
+                display: flex;
+                flex-direction: column;
+
+                @media (max-width: 992px) {
+                    .mobile-albom {
+                        display: none !important;
+                    }
+
+                    .header-chart-list,
+                    .chart-track {
+                        .track-number {
+                            max-width: 5% !important;
+                        }
+
+                        .track-albom {
+                            max-width: 5% !important;
+                        }
+
+                        .track-name {
+                            max-width: 50% !important;
+                        }
+
+                        .track-executor {
+                            max-width: 30% !important;
+                        }
+                    }
+
+                    .chart-track {
+                        &.active {
+                            .circle {
+                                left: 6% !important;
+                            }
+                        }
+                    }
+                }
+
+                @media (max-width: 700px) {
+                    .mobile-executor {
+                        display: none !important;
+                    }
+
+                    .header-chart-list,
+                    .chart-track {
+                        .track-number {
+                            max-width: 7% !important;
+                        }
+
+                        .track-albom {
+                            max-width: 7% !important;
+                        }
+
+                        .track-name {
+                            max-width: 72% !important;
+                        }
+
+                        .track-like,
+                        .track-time {
+                            max-width: 7% !important;
+                        }
+                    }
+
+                    .chart-track {
+                        &.active {
+                            .circle {
+                                left: 8.5% !important;
+                            }
+                        }
+                    }
+                }
+
+                @media (max-width: 540px) {
+                    .mobile-like {
+                        display: none !important;
+                    }
+
+                    .header-chart-list,
+                    .chart-track {
+                        .track-number {
+                            max-width: 15% !important;
+                        }
+
+                        .track-albom {
+                            max-width: 15% !important;
+                        }
+
+                        .track-name {
+                            max-width: 70% !important;
+                        }
+
+                        .track-time {
+                            max-width: 15% !important;
+                        }
+                    }
+
+                    .chart-track {
+                        &.active {
+                            .circle {
+                                left: 16.5% !important;
+                            }
+                        }
+                    }
+                }
+
+                .header-chart-list {
+                    padding: 5px 0;
+                    display: flex;
+                    flex-direction: row;
+                    color: #4D4D4D;
+                    font-weight: 600;
+                }
+
+                .chart-track {
+                    padding: 5px 0;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    font-weight: 600;
+                    color: #4D4D4D;
+                    cursor: pointer;
+                    user-select: none;
+
+                    &.active {
+                        background-color: #2A2A2A;
+                        position: relative;
+
+                        .circle {
+                            position: absolute;
+                            top: 18px;
+                            left: 3.8%;
+                            background-color: #FFCC00;
+                            border-radius: 100%;
+                            width: 25px;
+                            height: 25px;
+                            animation: pulsing 2.5s infinite;
+
+                            @keyframes pulsing {
+                                0% {
+                                    -webkit-transform: scale(0.4, 0.4);
+                                    transform: scale(0.4, 0.4);
+                                }
+
+                                50% {
+                                    -webkit-transform: scale(0.7, 0.7);
+                                    transform: scale(0.7, 0.7);
+                                }
+
+                                100% {
+                                    -webkit-transform: scale(0.4, 0.4);
+                                    transform: scale(0.4, 0.4);
+                                }
+                            }
+                        }
+
+                        .track-albom {
+                            img {
+                                opacity: .4;
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        background: #2A2A2A;
+                    }
+
+                    .track-number,
+                    .track-name,
+                    .track-executor {
+                        color: #FFFFFF;
+                    }
+                }
+
+                .header-chart-list,
+                .chart-track {
+                    white-space: nowrap;
+
+                    .track-number {
+                        flex-grow: 0.1;
+                        max-width: 3%;
+                        padding: 14px 12px;
+                    }
+
+                    .track-albom {
+                        flex-grow: 0.1;
+                        max-width: 3%;
+
+                        img {
+                            height: 45px;
+                            border-radius: 5px;
+                            z-index: 1;
+                        }
+                    }
+
+                    .track-name {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        flex-grow: 3;
+                        max-width: 42%;
+                        padding: 14px 20px;
+                    }
+
+                    .track-executor {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        flex-grow: 2;
+                        max-width: 22%;
+                        padding: 14px 5px;
+                    }
+
+                    .name-albom {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        flex-grow: 1;
+                        max-width: 20%;
+                        padding: 14px 10px;
+                    }
+
+                    .track-like,
+                    .track-time {
+                        flex-grow: 0.1;
+                        padding: 14px 5px 14px 0;
+                        max-width: 5%;
+                        text-align: end;
+                    }
+                }
+            }
+        }
+    }
+}
